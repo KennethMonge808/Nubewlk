@@ -5,7 +5,7 @@
 /*
 *   Constante para establecer la ruta del servidor.
 */
-const SERVER = 'https://kennethmonge808.github.io/Nubewlk/coffeeshop/';
+
 
 /*
 *   Función para obtener todos los registros disponibles en los mantenimientos de tablas (operación read).
