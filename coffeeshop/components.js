@@ -14,8 +14,8 @@
 *
 *   Retorno: ninguno.
 */
-function readRows(api) {
-    fetch(api + 'readAll', {
+function readRows() {
+    fetch('readAll', {
         method: 'get'
     }).then(function (request) {
         // Se verifica si la petición es correcta, de lo contrario se muestra un mensaje en la consola indicando el problema.
@@ -45,8 +45,8 @@ function readRows(api) {
 *
 *   Retorno: ninguno.
 */
-function searchRows(api, form) {
-    fetch(api + 'search', {
+function searchRows(form) {
+    fetch('search', {
         method: 'post',
         body: new FormData(document.getElementById(form))
     }).then(function (request) {
@@ -76,8 +76,8 @@ function searchRows(api, form) {
 *
 *   Retorno: ninguno.
 */
-function saveRow(api, action, form, modal) {
-    fetch(api + action, {
+function saveRow(action, form, modal) {
+    fetch(action, {
         method: 'post',
         body: new FormData(document.getElementById(form))
     }).then(function (request) {
@@ -109,7 +109,7 @@ function saveRow(api, action, form, modal) {
 *
 *   Retorno: ninguno.
 */
-function confirmDelete(api, data) {
+function confirmDelete(data) {
     swal({
         title: 'Advertencia',
         text: '¿Desea eliminar el registro?',
